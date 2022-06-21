@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script src="js/export.js" type="module"></script>
+    <script src="js/import.js" type="module"></script>
+
+</head>
+<body>
+
+    
+
+    <!-- <input type="text" id="a1">
+    <input type="text" id="a2">
+    <p type="submit" onclick="myfun()" value="submit"> -->
+    <!-- <button type="button" onclick="myfun()"> submit</button> -->
+
+    <!-- <p id="demo"> hello </p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    
+    <input type="number" id="ifelse" onfocusout="ifelse()">
+
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <ol id="demo5"></ol>
+
+    <input type="text" id="demo6" onfocusout="myfun(5,4)">
+   
+    <p id="demo7"></p>
+
+    <p id="demo8"></p>
+
+    <p id="demo9"></p>
+
+    <p id="demo10"></p>
+    <p id="demo11"></p> -->
+
+    <button onclick="setTimeout(myfun,3000)"> try it </button> <br>
+
+    <button onclick="start()">Generate Value</button> <br>
+
+    <button onclick="end()">Get Value</button> <br>
+
+    <button onclick="distory()">distory</button>
+    
+    <p id="demo12"></p>
+
+
+    
+</body>
+</html>
+
+<script>
+
+    function myfun(){
+        alert('hi');
+    }
+
+    function start(){
+        localStorage.setItem("name","jon");
+    }
+
+    function end(){
+        var x = localStorage.getItem('name');
+        document.getElementById('demo12').innerHTML = x;
+    }
+
+    function distory(){
+        localStorage.removeItem('name');
+    }
+</script>
+
+<!-- <script>
+
+   
+
+    let a = 'work '+6;
+
+    let name = 'Jayblues';
+    let area = 'jayanagara';
+    let city = 'Mysuru';
+ 
+    let connect = name+' - '+area;
+
+    let json = [{
+        city:'mysore',
+        place:'jayanagar',
+        pincode:'560020'
+    }];   
+
+    document.getElementById('demo2').innerHTML = a;
+    document.getElementById('demo').innerHTML = name+'<br>'+area+'<br>'+city;
+    document.getElementById('demo1').innerHTML = connect;
+
+    function ifelse(){
+        // alert('hi');
+        var num = document.getElementById('ifelse').value;
+        var num_length = num.length;
+        if(num_length >= 10){
+            alert('correct');
+        }else if(num_length < 9){
+
+            alert('one number is missing');
+        }else{
+            alert('more then 10 digits');
+
+        }
+    }
+
+    document.getElementById('demo11').innerHTML = 'jayblues office is in '+json[0].city+' '+json[0].place+'<br> pincode:'+json[0].pincode;
+
+    let array = ['mysore','jayanagar',560020];
+
+    document.getElementById('demo3').innerHTML = 'jayblues office is in '+array[0]+' '+array[1]+'<br> pincode:'+array[2];
+
+
+    let office = [];
+
+    office[0] = "Zeroziela" ;
+    office[1] = "JayBlues" ;
+    office[2] = "TCS" ;
+
+    document.getElementById('demo4').innerHTML = office;
+
+
+    var xyz = 8.4;
+
+    var cc = Math.round(xyz); // return 8
+
+    var vv = Math.ceil(xyz); // return 9 up
+    var ee = Math.floor(xyz);// return 8 down
+    var ww = Math.trunc(xyz);// return 8
+
+    alert(ww);
+
+    function myfun() {
+
+        var int = document.getElementById('a1').value = 9;
+        var cont = document.getElementById('a2').value = 'hello';
+        var final = int+' '+cont;
+        alert(final);
+    }
+
+    // -------------------------------------6/6/22---------------------------------------------------
+
+    const cars = ['bmw','tata','volvo','Ford'];
+    let x = '';
+    for(var i=0; i<cars.length ; i++){
+        x += '<li>'+cars[i]+'</li>';
+    }
+
+    document.getElementById('demo5').innerHTML = x;
+
+    // ----------------------typeof---------------------------------------------
+    var z = 'hello323';
+
+    console.log(typeof z);
+
+    // ---------------------------try & catch -----------------------------
+
+
+    // -------------------------function through function---------------------------
+
+    function myfun(val1,val2){
+        
+        if(val1){
+            alert(5);
+        }else{
+            alert(4);
+        }
+    }
+
+
+    // -----------------------------search---------------------------------
+
+    var text = "welcome all"; 
+    var text_search = text.search("welcome");
+    document.getElementById("demo7").innerHTML = text_search;
+
+    // ---------------------------------replace-----------------------------------
+    var replace_text = text.replace('all','man');
+    document.getElementById("demo8").innerHTML = replace_text;
+
+    // -----------------------------------Arrow Function----------------------------
+
+    var myfun;
+
+    myfun = () => {
+        return "Hello World!";
+    }
+
+    document.getElementById("demo9").innerHTML = myfun();
+
+</script> -->
